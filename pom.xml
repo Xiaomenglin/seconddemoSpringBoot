@@ -14,12 +14,10 @@
     <name>seconddemo</name>
     <description>Demo project for Spring Boot</description>
     <packaging>war</packaging>>
-
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>1.8</java.version>
     </properties>
-
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -33,7 +31,6 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
@@ -88,7 +85,6 @@
             <version>3.4.0</version>
         </dependency>
     </dependencies>
-
     <build>
         <plugins>
             <plugin>
@@ -97,6 +93,4 @@
             </plugin>
         </plugins>
     </build>
-
-
 </project>
