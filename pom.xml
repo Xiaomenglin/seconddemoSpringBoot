@@ -104,5 +104,6 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
         </plugins>
+        <finalName>html</finalName>
     </build>
 </project>
