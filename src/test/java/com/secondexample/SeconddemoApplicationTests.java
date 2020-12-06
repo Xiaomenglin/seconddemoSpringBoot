@@ -3,6 +3,7 @@ package com.secondexample;
 import com.secondexample.entity.User;
 import com.secondexample.mapper.UserMapper;
 
+import org.junit.Assert;
 import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -26,13 +27,23 @@ class SeconddemoApplicationTests extends AbstractTestNGSpringContextTests {
     }
 
     @Test
-    public void insert(){
+    public void addUser(){
         User user = new User();
-        user.setName("李四");
-        user.setAge(23);
-        user.setEmail("lisi@test.com");
+        user.setName("王五");
+        user.setAge(25);
+        user.setEmail("wangwu@test.com");
         int insertUser = userMapper.insert(user);
         logger.info("======="+insertUser);
+    }
+
+    @Test
+    public void updateUser(){
+        User user = new User();
+        user.setId(1335564248683667458L);
+        user.setAge(120);
+
+        int row = userMapper.updateById(user);
+        Assert.assertTrue("更新失败",row==1);
     }
 
 }
