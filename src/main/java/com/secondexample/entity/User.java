@@ -20,5 +20,5 @@ public class User {
     private Date updateTime;
     @Version  /**乐观锁**/
     @TableField(fill = FieldFill.INSERT)
-    private Integer version;//版本号
+    private int version;//版本号
 }

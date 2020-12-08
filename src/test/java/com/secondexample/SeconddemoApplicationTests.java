@@ -46,4 +46,15 @@ class SeconddemoApplicationTests extends AbstractTestNGSpringContextTests {
         Assert.assertTrue("更新失败",row==1);
     }
 
+    /**测试乐观锁**/
+    @Test
+    public void testoptimisticLockerInnerInterceptor(){
+        //根据ID查询
+        User user = userMapper.selectById(1336308351847403521L);
+
+        //进行修改
+        user.setAge(200);
+        userMapper.updateById(user);
+    }
+
 }
