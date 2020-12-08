@@ -29,9 +29,9 @@ class SeconddemoApplicationTests extends AbstractTestNGSpringContextTests {
     @Test
     public void addUser(){
         User user = new User();
-        user.setName("王五");
-        user.setAge(25);
-        user.setEmail("wangwu@test.com");
+        user.setName("东方不败");
+        user.setAge(60);
+        user.setEmail("dfbb@test.com");
         int insertUser = userMapper.insert(user);
         logger.info("======="+insertUser);
     }
