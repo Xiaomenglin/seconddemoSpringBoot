@@ -11,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.testng.AbstractTestNGSpringContextTests;
 
+import java.util.Arrays;
 import java.util.List;
 
 
@@ -50,11 +51,25 @@ class SeconddemoApplicationTests extends AbstractTestNGSpringContextTests {
     @Test
     public void testoptimisticLockerInnerInterceptor(){
         //根据ID查询
-        User user = userMapper.selectById(1336308351847403521L);
+        User user = userMapper.selectById(1348117076736282626L);
 
         //进行修改
         user.setAge(200);
         userMapper.updateById(user);
+    }
+
+    /**逻辑删除**/
+    @Test
+    public void testDeleteById(){
+        int result = userMapper.deleteById(1348158345843929090L);
+        logger.info("逻辑删除"+result);
+    }
+
+    /**批量删除**/
+    @Test
+    public void testDeleteBatchId(){
+        int result = userMapper.deleteBatchIds(Arrays.asList(1348108359668477953L,1348107676743114753L));
+        logger.info("批量删除"+result);
     }
 
 }
